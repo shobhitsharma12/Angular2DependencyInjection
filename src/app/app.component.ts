@@ -2,20 +2,14 @@ import {
   Component 
 } from '@angular/core';  
 
-import { 
-  appService 
-} from './app.service';  
-
-@Component({ 
+@Component ({ 
   selector: 'my-app', 
-  template: '<div>{{value}}</div>', 
-  providers: [appService]  
+  templateUrl: 'app/app.component.html' 
 }) 
 
 export class AppComponent { 
-  value: string = ""; 
-  constructor(private _appService: appService) { } 
-  ngOnInit(): void { 
-     this.value = this._appService.getApp(); 
-  }   
+  Status: boolean = true; 
+  clicked() { 
+     this.Status = false; 
+  } 
 }
