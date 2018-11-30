@@ -1,9 +1,14 @@
 import { 
   Component 
-} from '@angular/core';  
+} from '@angular/core'; 
+
+import { 
+  ChildComponent 
+} from './child.component'; 
 
 @Component ({ 
   selector: 'my-app', 
-  template: '<p>Multiplier: {{2 | Multiplier: 10}}</p>' 
+  template: '<child-app></child-app> ' 
 }) 
-export class AppComponent {  } 
+
+export class AppComponent { }
