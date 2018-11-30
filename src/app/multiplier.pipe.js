@@ -6,16 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var MultiplierPipe = (function () {
+    function MultiplierPipe() {
     }
-    return AppComponent;
+    MultiplierPipe.prototype.transform = function (value, multiply) {
+        var mul = parseFloat(multiply);
+        return mul * value;
+    };
+    return MultiplierPipe;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        template: '<p>Multiplier: {{2 | Multiplier: 10}}</p>'
+MultiplierPipe = __decorate([
+    core_1.Pipe({
+        name: 'Multiplier'
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], MultiplierPipe);
+exports.MultiplierPipe = MultiplierPipe;
+//# sourceMappingURL=multiplier.pipe.js.map

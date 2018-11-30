@@ -4,12 +4,6 @@ import {
 
 @Component ({ 
   selector: 'my-app', 
-  templateUrl: 'app/app.component.html' 
+  template: '<p>Multiplier: {{2 | Multiplier: 10}}</p>' 
 }) 
-
-export class AppComponent { 
-  Status: boolean = true; 
-  clicked() { 
-     this.Status = false; 
-  } 
-}
+export class AppComponent {  } 
